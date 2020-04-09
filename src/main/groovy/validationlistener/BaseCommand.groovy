@@ -1,9 +1,8 @@
 package validationlistener
 
-class BaseCommand {
-    static boolean areNamesValid(obj) {
-        // This is here to represent interacting with a Service
-        // bean from a static context...
-        ServiceLocator.someValidationHelperService.isValidNameCombination obj.firstName, obj.lastName
-    }
+class BaseCommand implements NotifyingValidateable {
+    // The real BaseCommand class that this trivial
+    // example represented can probably be eliminated
+    // altogether once all of the static methods in it
+    // have been removed.
 }
