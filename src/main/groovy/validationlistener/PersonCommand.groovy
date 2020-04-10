@@ -1,6 +1,8 @@
 package validationlistener
 
-class PersonCommand extends BaseCommand implements NotifyingValidateable {
+import grails.validation.Validateable
+
+class PersonCommand extends BaseCommand implements Validateable {
     String firstName
     String lastName
 }
