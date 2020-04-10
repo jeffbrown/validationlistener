@@ -17,6 +17,7 @@ trait NotifyingValidateable extends Validateable {
     boolean validate() {
         Validateable.super.validate()
         helper.fireValidationEvent(this)
+        !this.hasErrors()
     }
 
 }
